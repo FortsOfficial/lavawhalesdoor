@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk Door</title>
+  <style>
+    /* General Page Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    /* Door Styling */
+    .door-container {
+      position: relative;
+      width: 250px;
+      height: 500px;
+      background: linear-gradient(145deg, #2c0101, #450101);
+      border: 3px solid #ea413a; /* Updated reddish color */
+      box-shadow: 0 0 20px 5px rgba(234, 65, 58, 0.8); /* Updated reddish color */
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Door Handle */
+    .handle {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 80px;
+      background-color: #222;
+      border: 3px solid #ea413a; /* Updated reddish color */
+      box-shadow: 0 0 10px rgba(234, 65, 58, 0.8); /* Updated reddish color */
+      cursor: pointer;
+    }
+    .handle:hover {
+      background-color: #444;
+    }
+
+    /* Password Box Styling */
+    .password-box {
+      display: none;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: #edd4c6; /* Updated text color */
+    }
+
+    .password-box input, button {
+      padding: 8px;
+      margin: 5px;
+      background: #111;
+      color: #edd4c6; /* Updated text color */
+      border: 2px solid #ea413a; /* Updated reddish color */
+      border-radius: 5px;
+    }
+    button {
+      cursor: pointer;
+      background: #ea413a; /* Updated reddish color */
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #a10000;
+    }
+
+    /* Font Styling */
+    * {
+      text-transform: uppercase; /* Make all text uppercase */
+      text-shadow: 0 0 10px #ea413a, 0 0 20px #ea413a, 0 0 30px #ea413a; /* Added text glow effect */
+    }
+  </style>
+
+  <!-- Include Futura or Similar Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Door -->
+  <div class="door-container" id="door">
+    <div class="handle" id="handle"></div>
+    <div class="password-box" id="passwordBox">
+      <p>Enter the Secret Scroll Password:</p>
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="checkPassword()">Unlock</button>
+    </div>
+  </div>
+
+  <script>
+    const door = document.getElementById('door');
+    const handle = document.getElementById('handle');
+    const passwordBox = document.getElementById('passwordBox');
+
+    // Door Handle Click Event
+    handle.addEventListener('click', () => {
+      passwordBox.style.display = 'block'; // Show password box when handle is clicked
+    });
+
+    // Check Password function
+    function checkPassword() {
+      const correctPassword = "7suns"; // Set the new password here
+      const inputPassword = document.getElementById("password").value;
+      if (inputPassword === correctPassword) {
+        // Redirect to files.html
+        window.location.href = "files.html";
+      } else {
+        alert("Incorrect password. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>

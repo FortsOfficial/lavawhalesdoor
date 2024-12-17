@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your Secret Files</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141517;
+            color: #EDD4C6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, h2, .file-box p {
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(234, 65, 58, 0.7);
+        }
+        
+        h1 {
+            margin-top: 50px;
+            font-size: 40px;
+            color: #EA413A; /* Match "Warning: Lava Whales Approaching" */
+        }
+        
+        h2 {
+            font-size: 20px;
+            color: #EA413A;
+            margin-top: 10px;
+        }
+
+        .download-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .file-box {
+    width: 300px;
+    height: 400px;
+    border: 3px solid #EA413A;
+    background-color: #222;
+    color: #EDD4C6;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(234, 65, 58, 0.7);
+    position: relative;
+    display: block; /* Ensures box size remains fixed */
+}
+        
+        .file-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .file-box p {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Perfect horizontal centering */
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #EDD4C6;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px rgba(234, 65, 58, 0.6); /* Slight glow */
+}
+        
+        /* Hover Effect */
+        .file-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(234, 65, 58, 0.9), 0 0 30px rgba(234, 65, 58, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <h1>Download Your Secret Files</h1>
+    <h2>Warning: Lava Whales Approaching</h2>
+
+    <!-- Download Container -->
+    <div class="download-container">
+        <!-- File 1: Exclusive Poster (PDF download) -->
+        <a href="https://www.dropbox.com/scl/fi/ze8izlnm86ci3daz3n6nv/Lava-Whales-18x24.pdf?rlkey=q995sfq7s8wdudrjd0ydf095p&st=0hdsbnus&dl=1" download="Lava_Whales_18x24.pdf" class="file-box">
+            <img src="https://www.dropbox.com/scl/fi/3rriyt0zrihxvygr7r2ma/Lava-Whales-Poster.png?rlkey=iqzu17whi9p0j6onmw7856c1c&st=agjvovse&raw=1" alt="Lava Whales Poster">
+            <p>EXCLUSIVE LAVA WHALES PRINTABLE POSTER</p>
+        </a>
+        
+    <!-- File 2: Lyric Sneak Peek (PDF download) -->
+    <a href="https://www.dropbox.com/scl/fi/ws7s2ks2dvqwdsfkc1ghe/Lyric-Sneak-Peek.pdf?rlkey=x8bn9ssjgw2hmu5is97z6ovon&st=vdh9otao&dl=1" download="Lyric_Sneak_Peek.pdf" class="file-box">
+        <img src="https://www.dropbox.com/scl/fi/vn9jmburvw4tenixauk2a/Lava-Whales-Lyric-Poster.png?rlkey=y2kizvh1bwd9w1x9tehij9q9d&st=exl8bva1&raw=1" alt="Lava Whales Lyric Poster">
+        <p>LYRIC SNEAK PEEK</p>
+    </a>
+</div>
+
+</body>
+</html>
